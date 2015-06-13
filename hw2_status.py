@@ -2,12 +2,17 @@ import csv
 ss = open("status.csv", "r")
 yy = csv.reader(ss)
 
-result2={}
+result2 = {}
+rownum = 0
 for row in yy:
-    key = row[1]
-    if key in result2:
-        pass
+    if rownum == 0:
+        header = row[:]
     else:
-        result2[key] = row[2:]
-    print(result2)
+        k = row[1]
+        v = row[2:]
+        result2[k] = v
+    rownum += 1
+
+print(result2)
+print(len(result2))
 ss.close()
