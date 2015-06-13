@@ -11,9 +11,8 @@ for row in bb:
     elif len(row[0])== 0:
             pass
     else:
-        kk = row[0]
-        vv = row[1], row[2], row[8]
-        result = [kk, vv]
+        result = [row[0],row[1], row[2], row[8]]
+        
         print(result)
     rownum +=1
 
