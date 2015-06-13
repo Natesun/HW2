@@ -4,6 +4,7 @@ bb = csv.reader(ff)
 
 result = []
 rownum = 0
+data = []
 
 for row in bb:
     if rownum == 0:
@@ -12,10 +13,8 @@ for row in bb:
             pass
     else:
         result = [row[0],row[1], row[2], row[8]]
-        
         print(result)
     rownum +=1
-
 
 ff.close()
 
