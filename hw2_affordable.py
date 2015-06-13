@@ -1,21 +1,22 @@
 import csv
 ff = open("affordable.csv", "r")
 bb = csv.reader(ff)
-result = {}
+
+result = []
 rownum = 0
 
 for row in bb:
     if rownum == 0:
-        header = row[:]
+        heading = row[:]
+
     else:
-        k = row[0]
-        v = row[1], row[2], row[8]
-
-        result[k] = v
-
+        kk = row[0]
+        vv = row[1], row[2], row[8]
+        result = [kk, vv]
+        print(result)
     rownum +=1
-print(result)
-print(len(result))
+
+
 ff.close()
 
 
