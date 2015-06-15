@@ -1,3 +1,4 @@
+class affordable:
 import csv
 ff = open("affordable.csv", "r")
 bb = csv.reader(ff)
@@ -15,7 +16,6 @@ for row in bb:
         result = [row[0],row[1], row[2], row[8]]
         print(result)
     rownum +=1
-
 ff.close()
 
 

@@ -1,3 +1,4 @@
+class status:
 import csv
 ss = open("status.csv", "r")
 yy = csv.reader(ss)
@@ -13,5 +14,4 @@ for row in yy:
         print(result2)
 
     rownum += 1
-
 ss.close()
