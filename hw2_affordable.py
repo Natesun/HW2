@@ -1,9 +1,13 @@
-class affordable:
+class Affordable:
+    def _init_(self, name, unit):
+        self.name= name
+        self.unit= unit
+
 import csv
 ff = open("affordable.csv", "r")
 bb = csv.reader(ff)
 
-result = []
+result = [Affordable]
 rownum = 0
 data = []
 
