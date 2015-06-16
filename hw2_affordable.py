@@ -1,38 +1,44 @@
-class Affordable:
-    def _init_(self, name, unit):
-        self.name= name
-        self.unit= unit
 
 
+
+def affordableunit():
+#I am trying to make a list with area number and affordable unit numbers
     import csv
-    ff = open("affordable2.csv", "r")
+    ff = open("Affordable2.csv", "r")
     bb = csv.reader(ff)
-
-    result = []
+    unit_num = []
     rownum = 0
-    data = []
 
     for row in bb:
         if rownum == 0:
-            heading = row[:]
-        elif len(row[0])== 0:
-                pass
+            pass
         else:
-            result.append(row[0])
-
+            unit_num.append([row[0], row[8]])
         rownum +=1
-    print(result)
-    print(len(result))
 
-from pydoc import help
-from scipy.stats.stats import pearson
-help(pearson)
+    return unit_num
+    ff.close()
 
-pearson(x, y)
+def status_index():
+    import csv
+    yy = open("status.csv", "r")
+    ss = csv.reader(yy)
+    income = []
+    rownum1 = 0
 
-do a if statement for repetitive numbers
+    for row in ss:
+        if rownum1 == 0:
+            pass
+        else:
+            income.append([row[0], row[7]])
+        rownum1 +=1
+    return income
+    yy.close()
+status_index()
 
-
+def income_unitnum():
+    for i in range(6):
+        r, x, y, xy, xx, yy = []
 
 
 
