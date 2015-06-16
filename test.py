@@ -1,22 +1,17 @@
-from csv import*
-def affordableunit():
+import csv
 
-    unit_num = []
-    ff = open("Affordable2.csv")
-    bb = reader(ff)
-    rownum = 0
+out = open("affordable2.csv", "r")
+data = csv.reader(out)
+unit_num =[]
+rownum =0
+data = [[row[0],row[8]] for row in data]
 
-
-    for row in bb:
-        if rownum == 0:
-            pass
-        else:
-            unit_num.append([row[0], row[8]])
-        rownum +=1
-
-    return unit_num
-affordableunit()
+print(data)
 
 
-
+out = open("data.csv","w")
+output = csv.writer
+for row in data:
+    output.writerow(row)
+out.close()
 
