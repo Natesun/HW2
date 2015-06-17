@@ -50,18 +50,20 @@ print(y)
 print(len(y))
 
 def pearsontest():
-
     from pydoc import help
     from scipy.stats.stats import pearsonr
     print("the r and p values for pearson's correlation are" , pearsonr(x,y))
 pearsontest()
 
 import unittest
+from pydoc import help
+from scipy.stats.stats import pearsonr
 
 class Testpr(unittest.TestCase):
      def test_basic_equal(self):
          self.assertEqual(len(incomelist()), 77)
          self.assertEqual(len(unitnumlist()), 77)
+         self.assertEqual(pearsonr([1,2,3],[1,5,7])[0].round(7), 0.9819805)
 
 if __name__ == '__main__':
     unittest.main()
