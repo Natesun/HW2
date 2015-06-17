@@ -49,9 +49,22 @@ print(len(x))
 print(y)
 print(len(y))
 
-from pydoc import help
-from scipy.stats.stats import pearsonr
-print("the r and p values for pearson's correlation are" , pearsonr(x,y))
+def pearsontest():
+
+    from pydoc import help
+    from scipy.stats.stats import pearsonr
+    return("the r and p values for pearson's correlation are" , pearsonr(x,y))
+pearsontest()
+
+import unittest
+from incomelist import incomelist
+class Test(unittest, TestCase):
+     def test_incomelist(self):
+         self.assertEquals(len(incomelist()), 77)
+
+if __name__ == "__main__"
+    unitest.main()
+
 
 
 
