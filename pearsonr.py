@@ -51,6 +51,8 @@ print(len(y))
 
 from pydoc import help
 from scipy.stats.stats import pearsonr
-print("the r and p values for pearson's correlation is" , pearsonr(x,y))
+print("the r and p values for pearson's correlation are" , pearsonr(x,y))
+
+
 
 
